@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Register</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js'></script>
+    </head>
+<body>
+	<center>
+		<h1 >Registration</h1>
+		<form action="{% url 'account_registration'}" method="post" class="form">
+			{% csrf_token %}
+			<table>
+				<tr>
+					<td>First Name</td>
+					<td>:</td>
+					<td><input type="text" name="firstname"></td>
+					<br>
+				</tr>
+				<tr>
+					<td>Last Name</td>
+					<td>:</td>
+					<td><input type="text" name="lastname"></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td>:</td>
+					<td><input type="Email" name="email"></td>
+				</tr>
+				<tr>
+					<td>UserName</td>
+					<td>:</td>
+					<td><input type="text" name="username"></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td>:</td>
+					<td><input type="Password" name="password"></td>
+				</tr>
+				<tr>
+					<td colspan="3" align="center"><input type="submit" name="submit"></td>
+				</tr>
+			</table>
+		</form>
+	</center>
+</body>
+</html>
